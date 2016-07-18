@@ -1,4 +1,5 @@
 import bb.cascades 1.4
+import bb.system 1.2
 
 Page {
     property bool debugMode: false
@@ -148,7 +149,7 @@ Page {
                     topMargin: ui.sdu(3)
                     bottomMargin: ui.sdu(3)
                     onClicked: {
-                        __App.FromBase64ToPNGImage(coffeeConsumption.base64image, "CoffeeConsumption_chart");
+                        if (__App.FromBase64ToPNGImage(ethnicities.base64image, "CoffeeConsumption_chart")) savedToast.show();
                     }
                 }
                 Header {
@@ -226,7 +227,7 @@ Page {
                         topMargin: ui.sdu(3)
                         bottomMargin: ui.sdu(3)
                         onClicked: {
-                            __App.FromBase64ToPNGImage(electricityProduction_FossilFuels.base64image, "CoffeeConsumption_chart");
+                            if (__App.FromBase64ToPNGImage(ethnicities.base64image, "electricityProduction_FossilFuels_chart")) savedToast.show();
                         }
                     }
                     WebView {
@@ -296,7 +297,7 @@ Page {
                         topMargin: ui.sdu(3)
                         bottomMargin: ui.sdu(3)
                         onClicked: {
-                            __App.FromBase64ToPNGImage(electricityProduction_NuclearEnergy.base64image, "electricityProduction_NuclearEnergy_chart");
+                            if (__App.FromBase64ToPNGImage(ethnicities.base64image, "electricityProduction_NuclearEnergy_chart")) savedToast.show();
                         }
                     }
                     WebView {
@@ -366,7 +367,7 @@ Page {
                         topMargin: ui.sdu(3)
                         bottomMargin: ui.sdu(3)
                         onClicked: {
-                            __App.FromBase64ToPNGImage(electricityProduction_RenewableEnergy.base64image, "electricityProduction_RenewableEnergy_chart");
+                            if (__App.FromBase64ToPNGImage(ethnicities.base64image, "electricityProduction_RenewableEnergy_chart")) savedToast.show();
                         }
                     }
                 }
@@ -506,7 +507,7 @@ Page {
                     topMargin: ui.sdu(3)
                     bottomMargin: ui.sdu(3)
                     onClicked: {
-                        __App.FromBase64ToPNGImage(commonFoodComsumption.base64image, "commonFoodComsumption_chart");
+                        if (__App.FromBase64ToPNGImage(ethnicities.base64image, "commonFoodComsumption_chart")) savedToast.show();
                     }
                 }
                 Header {
@@ -606,7 +607,7 @@ Page {
                     topMargin: ui.sdu(3)
                     bottomMargin: ui.sdu(3)
                     onClicked: {
-                        __App.FromBase64ToPNGImage(ethnicities.base64image, "religions_chart");
+                        if (__App.FromBase64ToPNGImage(ethnicities.base64image, "custom_chart")) savedToast.show();
                     }
                 }
             }
@@ -626,6 +627,10 @@ Page {
                     width = layoutFrame.width;
                 }
 
+            },
+            SystemToast {
+                id: savedToast
+                body: "Your chart was saved with success :)\nOpen the image gallery to view it."
             }
         ]
     }
