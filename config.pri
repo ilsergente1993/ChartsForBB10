@@ -39,7 +39,6 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/Bar.qml) \
         $$quote($$BASEDIR/assets/Bubble.qml) \
         $$quote($$BASEDIR/assets/CrazyCharts.qml) \
-        $$quote($$BASEDIR/assets/Introduction.qml) \
         $$quote($$BASEDIR/assets/Line.qml) \
         $$quote($$BASEDIR/assets/PieDoughnut.qml) \
         $$quote($$BASEDIR/assets/PolarArea.qml) \

@@ -17,14 +17,6 @@
 import bb.cascades 1.4
 
 TabbedPane {
-    activeTab: introduction
-    Tab {
-        id: introduction
-        title: qsTr("Introduction") + Retranslate.onLocaleOrLanguageChanged
-        delegate: Delegate {
-            source: "Introduction.qml"
-        }
-    }
     Tab {
         id: bar
         title: qsTr("Bar") + Retranslate.onLocaleOrLanguageChanged
